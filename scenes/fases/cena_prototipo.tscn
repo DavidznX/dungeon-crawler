@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://ce0a041gxusdm"]
 
-[ext_resource type="MeshLibrary" uid="uid://b56prpwhk2cga" path="res://grids/grids.tres" id="1_ktfoq"]
+[ext_resource type="Texture2D" uid="uid://bf3yv87s7yi1q" path="res://texture/dotgrid/dark/dark_texture1_dotgrid.png" id="1_ktfoq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_034lx"]
+albedo_texture = ExtResource("1_ktfoq")
+uv1_triplanar = true
 
 [node name="CenaPrototipo" type="Node3D" unique_id=1342170179]
 
-[node name="GridMap" type="GridMap" parent="." unique_id=1770605303]
-mesh_library = ExtResource("1_ktfoq")
-cell_size = Vector3(3, 3, 3)
-cell_center_x = false
-data = {
-"cells": PackedInt32Array(65532, 65533, 1245186, 65532, 65534, 1245186, 65532, 65535, 1245186, 65534, 3, 1441793, 65533, 3, 1441793, 65532, 3, 1441793)
-}
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1979723340]
+use_collision = true
+size = Vector3(10, 0.5, 10)
+material = SubResource("StandardMaterial3D_034lx")
