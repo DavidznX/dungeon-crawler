@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dpgcxa2vmc2ge"]
+
+[ext_resource type="Script" uid="uid://b2wldl7a1rxym" path="res://scripts/player.gd" id="1_8afob"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dovo2"]
+size = Vector3(1, 1.5410156, 1)
+
+[node name="Player" type="CharacterBody3D" unique_id=219455374]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3272351, 0)
+script = ExtResource("1_8afob")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1468376234]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=964544746]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.55354357, 0)
+shape = SubResource("BoxShape3D_dovo2")

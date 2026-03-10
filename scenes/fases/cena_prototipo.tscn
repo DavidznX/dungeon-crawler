@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ce0a041gxusdm"]
+
+[ext_resource type="MeshLibrary" uid="uid://b56prpwhk2cga" path="res://grids/grids.tres" id="1_ktfoq"]
+
+[node name="CenaPrototipo" type="Node3D" unique_id=1342170179]
+
+[node name="GridMap" type="GridMap" parent="." unique_id=1770605303]
+mesh_library = ExtResource("1_ktfoq")
+cell_size = Vector3(3, 3, 3)
+cell_center_x = false
+data = {
+"cells": PackedInt32Array(65532, 65533, 1245186, 65532, 65534, 1245186, 65532, 65535, 1245186, 65534, 3, 1441793, 65533, 3, 1441793, 65532, 3, 1441793)
+}
