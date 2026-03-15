@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4mhfe5iw15dm"
-path.s3tc="res://.godot/imported/fase_0.png-ac2e754b36073c4488e4014b41b679e2.s3tc.ctex"
+uid="uid://g4ctoxhraslc"
+path.s3tc="res://.godot/imported/fase_2.png-623f3653691247d3f608914e5295d1dd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "852936e7740bdf1d85666123244d9680"
+"md5": "941681a881030d216f4c699a4f18ef85"
 }
 
 [deps]
 
-source_file="res://assets/models/fase_0.png"
-dest_files=["res://.godot/imported/fase_0.png-ac2e754b36073c4488e4014b41b679e2.s3tc.ctex"]
+source_file="res://assets/models/fase_2.png"
+dest_files=["res://.godot/imported/fase_2.png-623f3653691247d3f608914e5295d1dd.s3tc.ctex"]
 
 [params]
 
