@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://dpgcxa2vmc2ge"]
 
-[ext_resource type="Script" uid="uid://b2wldl7a1rxym" path="res://scripts/player.gd" id="1_8afob"]
-[ext_resource type="Script" uid="uid://csxefq3ja15kx" path="res://scripts/camera_pivot.gd" id="2_dovo2"]
+[ext_resource type="Script" uid="uid://b2wldl7a1rxym" path="res://scripts/player/player.gd" id="1_8afob"]
+[ext_resource type="Script" uid="uid://csxefq3ja15kx" path="res://scripts/player/camera_pivot.gd" id="2_dovo2"]
+[ext_resource type="PackedScene" uid="uid://diilg1qkdqcty" path="res://scenes/inventario/Controlador_inventario.tscn" id="3_gmlin"]
+[ext_resource type="PackedScene" uid="uid://ql2lxiisyg6u" path="res://assets/models/itens/espada.glb" id="4_lvxji"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dovo2"]
 size = Vector3(1, 1.5410156, 1)
 
-[node name="Player" type="CharacterBody3D" unique_id=219455374]
+[node name="Player" type="CharacterBody3D" unique_id=219455374 groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3272351, 0)
 script = ExtResource("1_8afob")
 
@@ -18,3 +20,13 @@ shape = SubResource("BoxShape3D_dovo2")
 script = ExtResource("2_dovo2")
 
 [node name="Camera3D" type="Camera3D" parent="camera_pivot" unique_id=1468376234]
+
+[node name="controlador_inventario" parent="." unique_id=260127267 instance=ExtResource("3_gmlin")]
+
+[node name="mao_dir" type="Node3D" parent="." unique_id=1791199444]
+transform = Transform3D(0.42886743, 0.20917264, 0.87881714, -0.43837112, 0.89879405, 0, -0.78987557, -0.3852481, 0.47715876, 0.61, -0.74, -0.368)
+
+[node name="blockbench_export" parent="mao_dir" unique_id=564514548 instance=ExtResource("4_lvxji")]
+
+[editable path="controlador_inventario"]
+[editable path="controlador_inventario/inventario/lista_de_itens/Slot_interativo"]

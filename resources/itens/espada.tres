@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://3qvdmr4ifmbn"]
+
+[ext_resource type="Script" uid="uid://djbwc7oltclae" path="res://scripts/inventario/Item_data.gd" id="1_1k0r0"]
+[ext_resource type="PackedScene" uid="uid://ql2lxiisyg6u" path="res://assets/models/itens/espada.glb" id="1_rcgxc"]
+[ext_resource type="Texture2D" uid="uid://dicaxfh4gkjwc" path="res://assets/models/itens/espada_0.png" id="3_cu7ap"]
+
+[resource]
+script = ExtResource("1_1k0r0")
+textura_item = ExtResource("3_cu7ap")
+nome = "espada"
+descricao = "espada top"
+tipo = "arma"
+quantidade_max = 1
+caminho_modelo = ExtResource("1_rcgxc")
+metadata/_custom_type_script = "uid://djbwc7oltclae"

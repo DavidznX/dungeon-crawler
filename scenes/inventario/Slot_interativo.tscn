@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://b0nqlrin0bvi3"]
+
+[ext_resource type="Script" uid="uid://dt2jvdfdq1u8s" path="res://scripts/inventario/Slot_interativo.gd" id="1_0d4an"]
+
+[node name="Slot_interativo" type="Control" unique_id=1038102040]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+script = ExtResource("1_0d4an")
+
+[node name="background" type="ColorRect" parent="." unique_id=1485322606]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(3, 0.66)
+color = Color(0.15487596, 0.154876, 0.15487596, 1)
+
+[node name="nome_item" type="Label" parent="." unique_id=571530003]
+layout_mode = 1
+offset_left = 2.0
+offset_right = 89.0
+offset_bottom = 23.0
+rotation = 0.00088560925
+text = "Nome item"
+
+[node name="quantidade" type="Label" parent="." unique_id=1750326473]
+layout_mode = 1
+offset_left = 96.484024
+offset_top = 0.9915727
+offset_right = 116.86717
+offset_bottom = 23.991573
+rotation = 0.00088560925
+text = "0"

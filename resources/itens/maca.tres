@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bli3n7kmwdi7i"]
+
+[ext_resource type="PackedScene" uid="uid://bws21oabl8kgu" path="res://assets/models/itens/maca.glb" id="1_76u7o"]
+[ext_resource type="Script" uid="uid://djbwc7oltclae" path="res://scripts/inventario/Item_data.gd" id="1_yeega"]
+[ext_resource type="Texture2D" uid="uid://dbpq4dlcvihbm" path="res://texture/maca.png" id="2_76u7o"]
+
+[resource]
+script = ExtResource("1_yeega")
+textura_item = ExtResource("2_76u7o")
+nome = "maca"
+descricao = "aaaa"
+tipo = "consumivel"
+amontuavel = true
+quantidade_max = 16
+caminho_modelo = ExtResource("1_76u7o")
+metadata/_custom_type_script = "uid://djbwc7oltclae"

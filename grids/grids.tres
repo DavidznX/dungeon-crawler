@@ -1,7 +1,7 @@
 [gd_resource type="MeshLibrary" format=4 uid="uid://b56prpwhk2cga"]
 
-[ext_resource type="Texture2D" uid="uid://ddvn3ggyiaqp7" path="res://assets/models/grid_map_0.png" id="1_wfdog"]
-[ext_resource type="Texture2D" uid="uid://cefv7hh3x8hh4" path="res://assets/models/grid_map_1.png" id="2_2s2cg"]
+[ext_resource type="Texture2D" uid="uid://ddvn3ggyiaqp7" path="res://assets/models/fases/grid_map_0.png" id="1_wfdog"]
+[ext_resource type="Texture2D" uid="uid://cefv7hh3x8hh4" path="res://assets/models/fases/grid_map_1.png" id="2_2s2cg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lyfom"]
 resource_name = "material_0"

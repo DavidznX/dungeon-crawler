@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://diilg1qkdqcty"]
+
+[ext_resource type="Script" uid="uid://do72bbasodujs" path="res://scripts/inventario/Controlador_inventario.gd" id="1_xc6p4"]
+[ext_resource type="PackedScene" uid="uid://b0nqlrin0bvi3" path="res://scenes/inventario/Slot_interativo.tscn" id="2_84ubs"]
+
+[node name="controlador_inventario" type="Node" unique_id=260127267]
+script = ExtResource("1_xc6p4")
+
+[node name="inventario" type="Control" parent="." unique_id=1159336330]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="ColorRect" parent="inventario" unique_id=117492102]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.20784314, 0.20784314, 0.20784314, 0.56078434)
+
+[node name="lista_de_itens" type="VBoxContainer" parent="inventario" unique_id=985814122]
+visible = false
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 79.99997
+offset_bottom = 148.0
+rotation = -0.0021591985
+scale = Vector2(3, 3)
+theme_override_constants/separation = 27
+
+[node name="Slot_interativo" parent="inventario/lista_de_itens" unique_id=1038102040 instance=ExtResource("2_84ubs")]
+layout_mode = 2
+
+[node name="ItemList" type="ItemList" parent="inventario" unique_id=1409447681]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 462.0
+grow_vertical = 2
+item_count = 1
+
+[editable path="inventario/lista_de_itens/Slot_interativo"]
