@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://l8ja51xvf7v5"]
+
+[ext_resource type="PackedScene" uid="uid://cn2c3rkj4yb33" path="res://assets/models/itens/espada_inicial.dungeon.crawler.glb" id="1_gsom5"]
+[ext_resource type="Script" uid="uid://djbwc7oltclae" path="res://scripts/inventario/Item_data.gd" id="1_wljeo"]
+[ext_resource type="Texture2D" uid="uid://brfl2t36hukwx" path="res://assets/textures/icons_itens/espada_inicial.png" id="3_oxsfr"]
+
+[resource]
+script = ExtResource("1_wljeo")
+textura_item = ExtResource("3_oxsfr")
+nome = "Espada"
+descricao = "Arma inicial do jogo, voce ganhou do seu avo, uma energia estranha e sentida ao toca-la"
+tipo = "Arma"
+quantidade_max = 1
+caminho_modelo = ExtResource("1_gsom5")
+metadata/_custom_type_script = "uid://djbwc7oltclae"

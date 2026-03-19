@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://b2wldl7a1rxym" path="res://scripts/player/player.gd" id="1_8afob"]
 [ext_resource type="Script" uid="uid://csxefq3ja15kx" path="res://scripts/player/camera_pivot.gd" id="2_dovo2"]
 [ext_resource type="PackedScene" uid="uid://diilg1qkdqcty" path="res://scenes/inventario/Controlador_inventario.tscn" id="3_gmlin"]
-[ext_resource type="PackedScene" uid="uid://ql2lxiisyg6u" path="res://assets/models/itens/espada.glb" id="4_lvxji"]
+[ext_resource type="Script" uid="uid://b1aens5xd7fpi" path="res://scripts/player/RenderItemHand.gd" id="4_lvxji"]
+[ext_resource type="Resource" uid="uid://l8ja51xvf7v5" path="res://resources/itens/espada_inicial.tres" id="5_p47bc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dovo2"]
 size = Vector3(1, 1.5410156, 1)
@@ -25,8 +26,14 @@ script = ExtResource("2_dovo2")
 
 [node name="mao_dir" type="Node3D" parent="." unique_id=1791199444]
 transform = Transform3D(0.42886743, 0.20917264, 0.87881714, -0.43837112, 0.89879405, 0, -0.78987557, -0.3852481, 0.47715876, 0.61, -0.74, -0.368)
+script = ExtResource("4_lvxji")
+item_data = ExtResource("5_p47bc")
 
-[node name="blockbench_export" parent="mao_dir" unique_id=564514548 instance=ExtResource("4_lvxji")]
+[node name="Animation" type="AnimationPlayer" parent="." unique_id=952984551]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=774404116]
+omni_range = 41.376553
+omni_attenuation = 1.121
 
 [editable path="controlador_inventario"]
 [editable path="controlador_inventario/inventario/lista_de_itens/Slot_interativo"]

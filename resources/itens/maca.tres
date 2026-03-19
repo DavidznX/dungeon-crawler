@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bws21oabl8kgu" path="res://assets/models/itens/maca.glb" id="1_76u7o"]
 [ext_resource type="Script" uid="uid://djbwc7oltclae" path="res://scripts/inventario/Item_data.gd" id="1_yeega"]
-[ext_resource type="Texture2D" uid="uid://dbpq4dlcvihbm" path="res://texture/maca.png" id="2_76u7o"]
+[ext_resource type="Texture2D" uid="uid://dbpq4dlcvihbm" path="res://assets/textures/icons_itens/maca.png" id="2_76u7o"]
 
 [resource]
 script = ExtResource("1_yeega")
