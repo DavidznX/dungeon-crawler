@@ -7,6 +7,12 @@ var SPEED = 5.0
 
 
 func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("shift"): 
+		SPEED = SPEED*5
+	
+	if Input.is_action_just_pressed("dash"): 
+		SPEED =SPEED*50
+	
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
