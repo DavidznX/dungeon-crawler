@@ -7,6 +7,8 @@ var SPEED = 5.0
 
 
 func _physics_process(delta: float) -> void:
+	if not is_on_floor():
+		velocity += get_gravity() * delta
 	if Input.is_action_just_pressed("shift"): 
 		SPEED = SPEED*5
 	
