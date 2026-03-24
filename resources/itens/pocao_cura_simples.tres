@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://c3qlcns1cql4r"]
+
+[ext_resource type="Script" uid="uid://djbwc7oltclae" path="res://scripts/inventario/Item_data.gd" id="1_a8gc7"]
+[ext_resource type="PackedScene" uid="uid://dafjng23kfg77" path="res://scenes/itens/pocao_cura_simples.tscn" id="1_gb66o"]
+[ext_resource type="Texture2D" uid="uid://bqcjekery8fn8" path="res://assets/textures/icons_itens/pocao_cura_simples.png" id="3_t3sv0"]
+
+[resource]
+script = ExtResource("1_a8gc7")
+textura_item = ExtResource("3_t3sv0")
+nome = "Pocao de cura simples "
+descricao = "Pocao que regenera ferimentos 10hp +"
+tipo = "Consumivel"
+amontuavel = true
+quantidade_max = 64
+caminho_modelo = ExtResource("1_gb66o")
+metadata/_custom_type_script = "uid://djbwc7oltclae"
