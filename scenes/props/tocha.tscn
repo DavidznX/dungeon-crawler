@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ddq1ksuwlftxx"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_u73mb"]
+
+[node name="tocha" type="OmniLight3D" unique_id=2115575460]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1972635452]
+mesh = SubResource("SphereMesh_u73mb")
