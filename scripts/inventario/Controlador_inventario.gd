@@ -8,7 +8,7 @@ extends Node
 
 var inventario = []
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed('inventario'):
 		abrir_inventario()
 	
@@ -32,7 +32,7 @@ func listar_os_itens_no_invetario():
 func render_inventario(text, icon):
 	item_list.add_item(text,icon)
 	
-func jogar_item_fora(item):
+func jogar_item_fora(_item):
 	pass
 	
 	
