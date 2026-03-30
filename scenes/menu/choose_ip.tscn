@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cni8q517h5ak8"]
+
+[ext_resource type="Script" uid="uid://df3cq8ynsjwks" path="res://script/menu/choose_ip.gd" id="1_305j1"]
+
+[node name="Choose_ip" type="Control" unique_id=1333478113]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_305j1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1039816239]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer" unique_id=1487900480]
+custom_minimum_size = Vector2(240, 32)
+layout_mode = 2
+text = "localhost"
+placeholder_text = "IP DO SERVER"
+
+[node name="B_enter" type="Button" parent="VBoxContainer" unique_id=334973853]
+layout_mode = 2
+text = "JOGAR"
+
+[node name="B_back" type="Button" parent="VBoxContainer" unique_id=799952551]
+layout_mode = 2
+text = "VOLTAR"
+
+[connection signal="text_changed" from="VBoxContainer/TextEdit" to="." method="_on_text_edit_text_changed"]
+[connection signal="pressed" from="VBoxContainer/B_enter" to="." method="_on_b_enter_pressed"]
+[connection signal="pressed" from="VBoxContainer/B_back" to="." method="_on_b_back_pressed"]

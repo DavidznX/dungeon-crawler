@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://cunkpna3k7fsu"]
+
+[ext_resource type="Script" uid="uid://cgo12r3tufo3k" path="res://script/menu/Settings/remap_container.gd" id="1_wd4sf"]
+[ext_resource type="FontFile" uid="uid://db3mhaa2x1fma" path="res://assets/fonts/Friday13v12.ttf" id="2_01idr"]
+[ext_resource type="Script" uid="uid://d25gkvhpxukn7" path="res://script/menu/Settings/remap_input.gd" id="3_myfgr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5dtob"]
+font = ExtResource("2_01idr")
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wd4sf"]
+
+[node name="Remap_container" type="ColorRect" unique_id=1968894680]
+custom_minimum_size = Vector2(0, 30)
+color = Color(0, 0, 0, 0.2901961)
+script = ExtResource("1_wd4sf")
+
+[node name="L_input" type="Label" parent="." unique_id=127998571]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_right = 0.19999695
+grow_horizontal = 2
+grow_vertical = 2
+text = "input"
+label_settings = SubResource("LabelSettings_5dtob")
+vertical_alignment = 1
+
+[node name="B_remap" type="Button" parent="." unique_id=880954777]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_right = 0.7
+anchor_bottom = 1.0
+offset_left = -0.2000122
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+focus_behavior_recursive = 1
+theme_override_fonts/font = ExtResource("2_01idr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wd4sf")
+text = "Key"
+script = ExtResource("3_myfgr")
+theme_override_fonts/font = ExtResource("2_01idr")
+
+[node name="B_remap2" type="Button" parent="." unique_id=572511365]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.2000122
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+focus_behavior_recursive = 1
+theme_override_fonts/font = ExtResource("2_01idr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wd4sf")
+text = "Key"
+script = ExtResource("3_myfgr")
+theme_override_fonts/font = ExtResource("2_01idr")

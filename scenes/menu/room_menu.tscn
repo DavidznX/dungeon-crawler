@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://behqi7nmvsmxh"]
+
+[ext_resource type="Script" uid="uid://c40q2crhybatx" path="res://script/menu/room_menu.gd" id="1_d4yke"]
+[ext_resource type="Script" uid="uid://55w7osqpm6ps" path="res://script/Multiplayer/map_manager.gd" id="2_cyyw1"]
+[ext_resource type="PackedScene" uid="uid://dgow68wxogjh" path="res://scene/multiplayer/player_container_node.tscn" id="2_d4yke"]
+[ext_resource type="Texture2D" uid="uid://cvdih5ov638tt" path="res://icon.svg" id="3_ed6wu"]
+[ext_resource type="Texture2D" uid="uid://gl3vryprm7sa" path="res://assets/textures/entities/player/character1.png" id="4_cyyw1"]
+[ext_resource type="Script" uid="uid://bywv31ycgd3jf" path="res://script/menu/Room_menu/il_level_selector.gd" id="4_ntx2u"]
+[ext_resource type="Script" uid="uid://bl3hemd57p5lh" path="res://script/menu/Room_menu/il_char_selector.gd" id="4_sev73"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_sev73"]
+properties/0/path = NodePath(".:current_album")
+properties/0/spawn = true
+properties/0/replication_mode = 2
+
+[node name="Room_menu" type="Control" unique_id=2075092910]
+layout_mode = 3
+anchor_left = 0.966
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1236.48
+offset_top = -720.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d4yke")
+
+[node name="Multiplayer_container_spawner" type="MultiplayerSpawner" parent="." unique_id=612954934]
+_spawnable_scenes = PackedStringArray("uid://dgow68wxogjh")
+spawn_path = NodePath("../C_players")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=224073933]
+replication_config = SubResource("SceneReplicationConfig_sev73")
+
+[node name="Map_Manager" type="Node" parent="." unique_id=1456586244]
+script = ExtResource("2_cyyw1")
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="Map_Manager" unique_id=788259026]
+spawn_path = NodePath("..")
+
+[node name="C_players" type="VBoxContainer" parent="." unique_id=53286452]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Player_container_node" parent="C_players" unique_id=658709704 instance=ExtResource("2_d4yke")]
+layout_mode = 2
+
+[node name="Il_level_selector" type="ItemList" parent="." unique_id=127794481]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+item_count = 1
+max_columns = 5
+icon_mode = 0
+fixed_icon_size = Vector2i(160, 160)
+item_0/text = "asfasfae"
+item_0/icon = ExtResource("3_ed6wu")
+script = ExtResource("4_ntx2u")
+
+[node name="Il_character_selector" type="ItemList" parent="." unique_id=507315946]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+item_count = 2
+max_columns = 5
+icon_mode = 0
+fixed_icon_size = Vector2i(180, 180)
+item_0/text = "DOUTOR DESINGER"
+item_0/icon = ExtResource("4_cyyw1")
+item_1/text = "earghegrse"
+item_1/icon = ExtResource("3_ed6wu")
+script = ExtResource("4_sev73")
+
+[node name="C_buttons" type="HBoxContainer" parent="." unique_id=682896020]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.95
+anchor_right = 0.5
+anchor_bottom = 0.95
+offset_left = -104.5
+offset_top = -40.0
+offset_right = 104.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 128
+
+[node name="B_back" type="Button" parent="C_buttons" unique_id=131544436]
+layout_mode = 2
+text = "BACK"
+
+[node name="B_Character_selector" type="Button" parent="C_buttons" unique_id=684487356]
+layout_mode = 2
+text = "SelectCharacter"
+
+[node name="B_map_selector" type="Button" parent="C_buttons" unique_id=1498329437]
+visible = false
+layout_mode = 2
+text = "Selecionar mapa"
+
+[node name="B_start_ready" type="Button" parent="C_buttons" unique_id=800116664]
+layout_mode = 2
+text = "Pronto"
+
+[node name="pop_up_loading" type="ColorRect" parent="." unique_id=40353366]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.16862746, 0.19215687, 0.20784314, 0.92941177)
+
+[node name="Label" type="Label" parent="pop_up_loading" unique_id=916980601]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "PROCURANDO SERVIDOR..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="B_cancel" type="Button" parent="pop_up_loading" unique_id=808767332]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.6
+anchor_right = 0.5
+anchor_bottom = 0.6
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "CANCELAR"
+
+[node name="album_cover" type="TextureRect" parent="." unique_id=1221282117]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.9
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.1
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+texture = ExtResource("3_ed6wu")
+expand_mode = 3
+stretch_mode = 3
+
+[connection signal="level_selected" from="Il_level_selector" to="." method="_album_selected"]
+[connection signal="character_selected" from="Il_character_selector" to="." method="_character_selected"]
+[connection signal="pressed" from="C_buttons/B_back" to="." method="_on_b_back_pressed"]
+[connection signal="pressed" from="C_buttons/B_Character_selector" to="." method="_on_b_character_selector_pressed"]
+[connection signal="pressed" from="C_buttons/B_map_selector" to="." method="_on_b_map_selector_pressed"]
+[connection signal="pressed" from="C_buttons/B_start_ready" to="." method="_on_b_start_ready_pressed"]
+[connection signal="pressed" from="pop_up_loading/B_cancel" to="." method="_on_connection_failed"]

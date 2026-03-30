@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b1j86k1k6bc2x"]
+
+[ext_resource type="Script" uid="uid://b4o34y0aoibo" path="res://script/menu/enter_game.gd" id="1_yvrjm"]
+
+[node name="Enter_game" type="Control" unique_id=715369640]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yvrjm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1343473589]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="B_enter" type="Button" parent="VBoxContainer" unique_id=597809661]
+layout_mode = 2
+text = "ENTRAR NA PARTIDA"
+
+[node name="B_host" type="Button" parent="VBoxContainer" unique_id=698133378]
+layout_mode = 2
+text = "CRIAR PARTIDA"
+
+[node name="B_back" type="Button" parent="VBoxContainer" unique_id=2061686948]
+layout_mode = 2
+text = "VOLTAR"
+
+[connection signal="pressed" from="VBoxContainer/B_enter" to="." method="_on_b_enter_pressed"]
+[connection signal="pressed" from="VBoxContainer/B_host" to="." method="_on_b_host_pressed"]
+[connection signal="pressed" from="VBoxContainer/B_back" to="." method="_on_b_back_pressed"]

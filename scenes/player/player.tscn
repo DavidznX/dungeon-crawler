@@ -6,8 +6,7 @@
 [ext_resource type="Script" uid="uid://b1aens5xd7fpi" path="res://scripts/player/RenderItemHand.gd" id="4_lvxji"]
 [ext_resource type="Resource" uid="uid://l8ja51xvf7v5" path="res://resources/itens/espada_inicial.tres" id="5_p47bc"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_dovo2"]
-size = Vector3(1, 1.5410156, 1)
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_p47bc"]
 
 [node name="Player" type="CharacterBody3D" unique_id=219455374 groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3272351, 0)
@@ -15,7 +14,7 @@ script = ExtResource("1_8afob")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=964544746]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.55354357, 0)
-shape = SubResource("BoxShape3D_dovo2")
+shape = SubResource("CylinderShape3D_p47bc")
 
 [node name="camera_pivot" type="Node3D" parent="." unique_id=1259759366]
 script = ExtResource("2_dovo2")
