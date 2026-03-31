@@ -26,7 +26,8 @@ func guardar_item(dados_itens_coletados):
 	print(dados_itens_coletados[0].nome, dados_itens_coletados[1])	
 
 func listar_os_itens_no_invetario():
-	print(inventario)
+	pass
+	#print(inventario)
 
 
 func render_inventario(text, icon):
@@ -39,10 +40,8 @@ func jogar_item_fora(_item):
 func abrir_inventario():
 	if inventario_control.visible == false:
 		inventario_control.visible = true
-		player.SPEED = 0
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	else:
 		inventario_control.visible = false
-		player.SPEED = 5
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	

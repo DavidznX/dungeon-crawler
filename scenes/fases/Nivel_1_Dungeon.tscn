@@ -22,11 +22,7 @@ sky = SubResource("Sky_hokm7")
 transform = Transform3D(1, 0, 0, 0, 0.16043253, 0.98704684, 0, -0.98704684, 0.16043253, 8.6804695, 23.030731, 0)
 
 [node name="Player" parent="." unique_id=219455374 instance=ExtResource("7_cvdi3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.537202, 3.0768228, 42.684)
-walk_speed = 5.0
-sprint_multiplier = 2.0
-dash_force = 20.0
-acceleration = 10.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3404098, 1.5451136, 7.69716)
 friction = 50.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=394493392]

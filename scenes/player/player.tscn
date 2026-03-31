@@ -7,36 +7,32 @@
 [ext_resource type="Resource" uid="uid://l8ja51xvf7v5" path="res://resources/itens/espada_inicial.tres" id="5_p47bc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p47bc"]
-height = 1.7519531
+radius = 0.25
+height = 1.2944336
 
 [node name="Player" type="CharacterBody3D" unique_id=219455374 groups=["player"]]
 script = ExtResource("1_8afob")
-walk_speed = null
-sprint_multiplier = null
-dash_force = null
-acceleration = null
-friction = null
 
 [node name="controlador_inventario" parent="." unique_id=260127267 instance=ExtResource("3_gmlin")]
 
 [node name="camera_pivot" type="Node3D" parent="." unique_id=1259759366]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5959692, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0508943, 0)
 script = ExtResource("2_dovo2")
 
 [node name="Camera3D" type="Camera3D" parent="camera_pivot" unique_id=1468376234]
 
 [node name="mao_dir" type="Node3D" parent="." unique_id=1791199444]
-transform = Transform3D(0.42886743, 0.20917264, 0.87881714, -0.43837112, 0.89879405, 0, -0.78987557, -0.3852481, 0.47715876, 0.61, 1.2520912, -0.368)
+transform = Transform3D(0.42886743, 0.20917264, 0.87881714, -0.43837112, 0.89879405, 0, -0.78987557, -0.3852481, 0.47715876, 0.61, 0.8780104, -0.368)
 script = ExtResource("4_lvxji")
 item_data = ExtResource("5_p47bc")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=774404116]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5557829, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0235115, 0)
 omni_range = 41.376553
 omni_attenuation = 1.121
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=964544746]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86687547, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6381157, 0)
 shape = SubResource("CapsuleShape3D_p47bc")
 
 [node name="Animation" type="AnimationPlayer" parent="." unique_id=952984551]

@@ -2,11 +2,8 @@ extends Entity
 
 # Velocidades
 @export var walk_speed := 5.0
-@export var sprint_multiplier := 2.0   # segurar Shift multiplica a velocidade
-@export var dash_force := 20.0         # força do dash
-
-# Controles de suavidade
-
+@export var sprint_multiplier := 2.0
+@export var dash_force := 20.0
 
 # Dash
 var can_dash := true
@@ -14,6 +11,7 @@ var dash_cooldown := 0.5
 var dash_timer := 0.0
 
 @onready var inventario: Node = $controlador_inventario
+@onready var mao_dir: Node3D = $mao_dir
 
 
 func _physics_process(delta: float) -> void:
@@ -54,7 +52,9 @@ func _physics_process(delta: float) -> void:
 		velocity.z = lerp(velocity.z, 0.0, friction * delta)
 
 	move_and_slide()
-	
+
+func _attack():
+	pass
 
 func captar_item(dados_itens_coletados):
 	inventario.guardar_item(dados_itens_coletados)
