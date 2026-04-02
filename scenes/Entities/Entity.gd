@@ -11,7 +11,7 @@ class_name Entity
 
 signal block
 
-func _movement(input:Vector2):
+func _movement(_input:Vector2):
 	pass
 
 func get_damage(value:int):

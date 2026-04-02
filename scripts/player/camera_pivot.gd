@@ -5,11 +5,13 @@ extends Node3D
 
 var rotacao_x := 0.0
 
+var movement:bool
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event):
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		
 		# Rotação horizontal (player)
 		get_parent().rotate_y(deg_to_rad(-event.relative.x * sensibilidade))

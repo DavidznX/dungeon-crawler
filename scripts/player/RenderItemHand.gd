@@ -1,18 +1,22 @@
-extends Node3D
+extends MeshInstance3D
 class_name PlayerHand
-
-@export var item_data: Item
 
 @onready var render_modelo_item: Node3D = $"."
 
 
-func _ready() -> void:
-	render_item_hand()
-
 func _process(_delta: float) -> void:
 	position.y = 0.6 + 0.1 * sin(Time.get_ticks_msec() / 200.0)
 
-func render_item_hand():
-	if item_data and item_data.caminho_modelo:
-		var instancia = item_data.caminho_modelo.instantiate()
-		render_modelo_item.add_child(instancia)
+func _equip(item: Item):
+	mesh = item.mesh
+	
+	##=========SOFRIMENTO ALHEIO==============##
+	##==============NÃO MEXA!=================##
+	
+	var material_original = mesh.surface_get_material(0)
+	
+	if material_original:
+		var material_mao = material_original.duplicate()
+		material_mao.no_depth_test = true
+		material_override = material_mao
+	##=========================================##
