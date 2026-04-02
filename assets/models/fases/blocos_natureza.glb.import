@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cfebwahixk8cn"
-path="res://.godot/imported/teste.glb-f9fa3c7cb33127a2b4e37fbff597baf4.scn"
+uid="uid://clti2fvmlkr6f"
+path="res://.godot/imported/blocos_natureza.glb-d11150c2efb8ea07ae4292663cd04d05.scn"
 
 [deps]
 
-source_file="res://assets/models/fases/blocos_para_grig/teste.glb"
-dest_files=["res://.godot/imported/teste.glb-f9fa3c7cb33127a2b4e37fbff597baf4.scn"]
+source_file="res://assets/models/fases/blocos_natureza.glb"
+dest_files=["res://.godot/imported/blocos_natureza.glb-d11150c2efb8ea07ae4292663cd04d05.scn"]
 
 [params]
 
