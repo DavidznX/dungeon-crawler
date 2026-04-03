@@ -189,4 +189,6 @@ mesh = SubResource("ArrayMesh_wm78m")
 
 [node name="ray_attack" type="RayCast3D" parent="." unique_id=489880387]
 
+[connection signal="die" from="." to="." method="_on_die"]
+
 [editable path="controlador_inventario"]
