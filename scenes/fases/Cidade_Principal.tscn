@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://dpgcxa2vmc2ge" path="res://scenes/player/player.tscn" id="3_3o5o8"]
 [ext_resource type="MeshLibrary" uid="uid://ce7baf75ypwb0" path="res://resources/grids/grid_map_blocks_chao.tres" id="4_k0w1m"]
 [ext_resource type="PackedScene" uid="uid://dqnj1xl63yyv2" path="res://scenes/enemy/enemy.tscn" id="5_3o5o8"]
+[ext_resource type="PackedScene" uid="uid://dgp77s0rfe8lv" path="res://scenes/inventario/Item_interativo.tscn" id="5_xra5v"]
+[ext_resource type="Resource" uid="uid://3qvdmr4ifmbn" path="res://resources/itens/espada.tres" id="6_1tgik"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_xra5v"]
 panorama = ExtResource("1_lbf0f")
@@ -49,7 +51,7 @@ target = NodePath("../Player")
 
 [node name="blockbench_export" parent="." unique_id=1789563755 instance=ExtResource("2_k0w1m")]
 
-[node name="plane" parent="blockbench_export" index="24" unique_id=505491010]
+[node name="plane" parent="blockbench_export" index="24" unique_id=2136227833]
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="blockbench_export/plane" index="0" unique_id=1595961755]
@@ -57,17 +59,17 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="blockbench_export/plane/StaticBody3D" unique_id=709972005]
 shape = SubResource("ConcavePolygonShape3D_lbf0f")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="blockbench_export/plane2" parent_id_path=PackedInt32Array(1789563755, 1758693270) index="0" unique_id=1330473652]
+[node name="StaticBody3D" type="StaticBody3D" parent="blockbench_export/plane2" parent_id_path=PackedInt32Array(1789563755, 1021284491) index="0" unique_id=1330473652]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="blockbench_export/plane2/StaticBody3D" unique_id=996007296]
 shape = SubResource("ConcavePolygonShape3D_3o5o8")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="blockbench_export/plane3" parent_id_path=PackedInt32Array(1789563755, 1643034225) index="0" unique_id=1390009760]
+[node name="StaticBody3D" type="StaticBody3D" parent="blockbench_export/plane3" parent_id_path=PackedInt32Array(1789563755, 990548072) index="0" unique_id=1390009760]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="blockbench_export/plane3/StaticBody3D" unique_id=1650267743]
 shape = SubResource("ConcavePolygonShape3D_xra5v")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="blockbench_export/mesh" parent_id_path=PackedInt32Array(1789563755, 785891282) index="0" unique_id=979493207]
+[node name="StaticBody3D" type="StaticBody3D" parent="blockbench_export/mesh" parent_id_path=PackedInt32Array(1789563755, 131776246) index="0" unique_id=979493207]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="blockbench_export/mesh/StaticBody3D" unique_id=1259367029]
 shape = SubResource("ConcavePolygonShape3D_k0w1m")
@@ -82,5 +84,9 @@ data = {
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1102446610]
 navigation_mesh = SubResource("NavigationMesh_3o5o8")
+[node name="Item_interativo" parent="." unique_id=1673314931 instance=ExtResource("5_xra5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5421133, 1.5706434, 0)
+item_data = ExtResource("6_1tgik")
+quantidade = 1
 
 [editable path="blockbench_export"]

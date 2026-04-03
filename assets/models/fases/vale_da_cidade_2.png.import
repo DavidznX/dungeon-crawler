@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq0npstveo38u"
-path.s3tc="res://.godot/imported/vale_da_cidade_1.png-bd1113684064dbcc179a004c6dcad5b6.s3tc.ctex"
+uid="uid://hfgueaj5sbkd"
+path.s3tc="res://.godot/imported/vale_da_cidade_2.png-cfea7a367e8c5412f0d0c18507ac4ae7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "6a7e20d036561637596308ec0f50b582"
+"md5": "57b062d1288a4c169a7687884fb28d9f"
 }
 
 [deps]
 
-source_file="res://assets/models/fases/vale_da_cidade_1.png"
-dest_files=["res://.godot/imported/vale_da_cidade_1.png-bd1113684064dbcc179a004c6dcad5b6.s3tc.ctex"]
+source_file="res://assets/models/fases/vale_da_cidade_2.png"
+dest_files=["res://.godot/imported/vale_da_cidade_2.png-cfea7a367e8c5412f0d0c18507ac4ae7.s3tc.ctex"]
 
 [params]
 
