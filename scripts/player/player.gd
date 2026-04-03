@@ -19,11 +19,9 @@ var can_dash := true
 var dash_cooldown := 0.5
 var dash_timer := 0.0
 
-
 var array_equiped_item_slots:Array[Item] = [null,null,null,null]
 
 func _physics_process(delta: float) -> void:
-	
 	if Input.is_action_just_pressed("attack"):
 		_attack()
 	
@@ -41,29 +39,16 @@ func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("left", "right", "up", "down")
 	
 	# Usar global_transform.basis é mais seguro para evitar conflitos de rotação de nós pais
-	var direction := (global_transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	direction = (global_transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
 	if Input.is_action_just_pressed("dash") and can_dash:
 		var dash_dir = direction if direction != Vector3.ZERO else -global_transform.basis.z
 		velocity = dash_dir * dash_force
 		can_dash = false
 		dash_timer = dash_cooldown
-
-	if direction:
-		var target_vel = direction * current_speed
-		# Trocamos move_toward por lerp. Isso suaviza a transição de direção e tira o "passo em falso"
-		velocity.x = lerp(velocity.x, target_vel.x, acceleration * delta)
-		velocity.z = lerp(velocity.z, target_vel.z, acceleration * delta)
-	else:
-		# Desacelera (atrito) usando lerp também
-		velocity.x = lerp(velocity.x, 0.0, friction * delta)
-		velocity.z = lerp(velocity.z, 0.0, friction * delta)
 	
-	# Gravidade
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-	
-	move_and_slide()
+	# Logica de aplicacao de movimento la no apply_movement no Entity
+	apply_movement(direction, current_speed, delta)
 
 
 func _equip(item:Item):
@@ -108,3 +93,7 @@ func _drop_item():
 func captar_item(dados_itens_coletados):
 	inventario.guardar_item(dados_itens_coletados)
 	
+
+
+func _on_die() -> void:
+	get_tree().reload_current_scene()

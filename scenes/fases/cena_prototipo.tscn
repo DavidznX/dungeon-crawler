@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dgp77s0rfe8lv" path="res://scenes/inventario/Item_interativo.tscn" id="4_2bpsg"]
 [ext_resource type="Resource" uid="uid://bli3n7kmwdi7i" path="res://resources/itens/maca.tres" id="5_vhtip"]
 [ext_resource type="Resource" uid="uid://3qvdmr4ifmbn" path="res://resources/itens/espada.tres" id="6_uy2e8"]
+[ext_resource type="PackedScene" uid="uid://dqnj1xl63yyv2" path="res://scenes/enemy/enemy.tscn" id="7_ptv6w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ju0mn"]
 resource_name = "material_0"
@@ -15567,3 +15568,7 @@ quantidade = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.1948631)
 item_data = ExtResource("6_uy2e8")
 quantidade = 1
+
+[node name="Enemy" parent="." unique_id=992203215 node_paths=PackedStringArray("target") instance=ExtResource("7_ptv6w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0216484, 1.1949799, 7.825174)
+target = NodePath("../Player")
