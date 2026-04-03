@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq0npstveo38u"
-path.s3tc="res://.godot/imported/vale_da_cidade_1.png-bd1113684064dbcc179a004c6dcad5b6.s3tc.ctex"
+uid="uid://dxu64chqlb7mf"
+path.s3tc="res://.godot/imported/Goblin_0.png-352fe8672c209a34b3895d5740cb6551.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "6a7e20d036561637596308ec0f50b582"
+"md5": "27cdc0bff3bb261ce2acf59d514b0ea9"
 }
 
 [deps]
 
-source_file="res://assets/models/fases/vale_da_cidade_1.png"
-dest_files=["res://.godot/imported/vale_da_cidade_1.png-bd1113684064dbcc179a004c6dcad5b6.s3tc.ctex"]
+source_file="res://assets/models/creatures/Goblin_0.png"
+dest_files=["res://.godot/imported/Goblin_0.png-352fe8672c209a34b3895d5740cb6551.s3tc.ctex"]
 
 [params]
 
