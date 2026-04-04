@@ -37,3 +37,11 @@ func get_damage(value:int):
 		block.emit()
 	else:
 		life-=damage
+	
+	if life <= 0:
+		_die()
+
+func _die():
+	die.emit()
+	queue_free()
+	print("die: ", name)

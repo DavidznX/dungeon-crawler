@@ -15560,12 +15560,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.493156)
 omni_range = 51.735115
 
 [node name="maça" parent="." unique_id=1673314931 instance=ExtResource("4_2bpsg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.251, 0.3189515, 4.059)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.251, 0.71020085, 4.059)
 item_data = ExtResource("5_vhtip")
 quantidade = 1
 
 [node name="espada" parent="." unique_id=225020842 instance=ExtResource("4_2bpsg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.1948631)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39124936, 1.1948631)
 item_data = ExtResource("6_uy2e8")
 quantidade = 1
 

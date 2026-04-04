@@ -11,13 +11,15 @@ class_name Player
 @onready var hud: HUD = $HUD
 @onready var hand_item: PlayerHand = $hand_item
 
-@onready var ray_attack: RayCast3D = $ray_attack
+@onready var ray_attack: RayCast3D = $camera_pivot/Camera3D/ray_attack
 
 
 # Dash
 var can_dash := true
 var dash_cooldown := 0.5
 var dash_timer := 0.0
+
+var can_attack:bool = true
 
 var array_equiped_item_slots:Array[Item] = [null,null,null,null]
 
@@ -73,9 +75,22 @@ func _attack():
 	if (not array_equiped_item_slots[0] 
 	or not array_equiped_item_slots[0] is ItemAttack):
 		return
+	
+	if not can_attack: return
+	can_attack = false
+	
 	var item:ItemAttack = array_equiped_item_slots[0]
 	var damage:int = item.damage
 	#fazer a mecanica de causar dano e rodar o user de item
+	
+	var enemy:Entity = ray_attack.get_collider()
+	if enemy:
+		enemy.get_damage(item.damage)
+	
+	_animate_hand_item_attack()
+	
+	await get_tree().create_timer(0.5).timeout
+	can_attack = true
 
 
 #usar item do slot direita
@@ -94,6 +109,16 @@ func captar_item(dados_itens_coletados):
 	inventario.guardar_item(dados_itens_coletados)
 	
 
+func _die():
+	die.emit()
+	pass
 
 func _on_die() -> void:
 	get_tree().reload_current_scene()
+
+
+func _animate_hand_item_attack():
+	var tween = create_tween()
+	var target_rotation = deg_to_rad(-65.0)
+	tween.tween_property(hand_item, "rotation:x", target_rotation, 0.1)
+	tween.tween_property(hand_item, "rotation:x", 0.0, 0.1)

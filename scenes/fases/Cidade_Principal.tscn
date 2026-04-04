@@ -6,6 +6,7 @@
 [ext_resource type="MeshLibrary" uid="uid://ce7baf75ypwb0" path="res://resources/grids/grid_map_blocks_chao.tres" id="4_k0w1m"]
 [ext_resource type="PackedScene" uid="uid://dgp77s0rfe8lv" path="res://scenes/inventario/Item_interativo.tscn" id="5_xra5v"]
 [ext_resource type="Resource" uid="uid://3qvdmr4ifmbn" path="res://resources/itens/espada.tres" id="6_1tgik"]
+[ext_resource type="PackedScene" uid="uid://dy0cwda5cahnw" path="res://scenes/enemy/boss_1.tscn" id="7_1tgik"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_xra5v"]
 panorama = ExtResource("1_lbf0f")
@@ -36,7 +37,10 @@ environment = SubResource("Environment_1tgik")
 
 [node name="blockbench_export" parent="." unique_id=459698418 instance=ExtResource("2_k0w1m")]
 
-[node name="plane" parent="blockbench_export" index="18" unique_id=508078965]
+[node name="sphere" parent="blockbench_export" index="3" unique_id=1973140777]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 3.78125, -4.4714165)
+
+[node name="plane" parent="blockbench_export" index="18" unique_id=609962255]
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="blockbench_export/plane" index="0" unique_id=1595961755]
@@ -44,7 +48,7 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="blockbench_export/plane/StaticBody3D" unique_id=709972005]
 shape = SubResource("ConcavePolygonShape3D_lbf0f")
 
-[node name="plane2" parent="blockbench_export" index="19" unique_id=1330597366]
+[node name="plane2" parent="blockbench_export" index="19" unique_id=4119012]
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="blockbench_export/plane2" index="0" unique_id=1330473652]
@@ -52,7 +56,7 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="blockbench_export/plane2/StaticBody3D" unique_id=996007296]
 shape = SubResource("ConcavePolygonShape3D_3o5o8")
 
-[node name="plane3" parent="blockbench_export" index="20" unique_id=151607797]
+[node name="plane3" parent="blockbench_export" index="20" unique_id=1096351706]
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="blockbench_export/plane3" index="0" unique_id=1390009760]
@@ -61,7 +65,7 @@ visible = false
 shape = SubResource("ConcavePolygonShape3D_xra5v")
 
 [node name="Player" parent="." unique_id=219455374 instance=ExtResource("3_3o5o8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.930438, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9817195, 0)
 
 [node name="GridMap" type="GridMap" parent="." unique_id=1128201377]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
@@ -75,5 +79,8 @@ data = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5421133, 1.5706434, 0)
 item_data = ExtResource("6_1tgik")
 quantidade = 1
+
+[node name="Boss_1" parent="." unique_id=992203215 instance=ExtResource("7_1tgik")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3050036, 1, -1.626647)
 
 [editable path="blockbench_export"]
