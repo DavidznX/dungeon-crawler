@@ -6,7 +6,7 @@
 [ext_resource type="MeshLibrary" uid="uid://ce7baf75ypwb0" path="res://resources/grids/grid_map_blocks_chao.tres" id="4_k0w1m"]
 [ext_resource type="PackedScene" uid="uid://dgp77s0rfe8lv" path="res://scenes/inventario/Item_interativo.tscn" id="5_xra5v"]
 [ext_resource type="Resource" uid="uid://3qvdmr4ifmbn" path="res://resources/itens/espada.tres" id="6_1tgik"]
-[ext_resource type="PackedScene" uid="uid://dy0cwda5cahnw" path="res://scenes/enemy/boss_1.tscn" id="7_1tgik"]
+[ext_resource type="PackedScene" path="res://scenes/enemy/boss_1.tscn" id="7_1tgik"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_xra5v"]
 panorama = ExtResource("1_lbf0f")
@@ -37,10 +37,10 @@ environment = SubResource("Environment_1tgik")
 
 [node name="blockbench_export" parent="." unique_id=459698418 instance=ExtResource("2_k0w1m")]
 
-[node name="sphere" parent="blockbench_export" index="3" unique_id=1973140777]
+[node name="sphere" parent="blockbench_export" index="3" unique_id=1042450970]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 3.78125, -4.4714165)
 
-[node name="plane" parent="blockbench_export" index="18" unique_id=609962255]
+[node name="plane" parent="blockbench_export" index="18" unique_id=508078965]
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="blockbench_export/plane" index="0" unique_id=1595961755]
@@ -48,7 +48,7 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="blockbench_export/plane/StaticBody3D" unique_id=709972005]
 shape = SubResource("ConcavePolygonShape3D_lbf0f")
 
-[node name="plane2" parent="blockbench_export" index="19" unique_id=4119012]
+[node name="plane2" parent="blockbench_export" index="19" unique_id=1330597366]
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="blockbench_export/plane2" index="0" unique_id=1330473652]
@@ -56,7 +56,7 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="blockbench_export/plane2/StaticBody3D" unique_id=996007296]
 shape = SubResource("ConcavePolygonShape3D_3o5o8")
 
-[node name="plane3" parent="blockbench_export" index="20" unique_id=1096351706]
+[node name="plane3" parent="blockbench_export" index="20" unique_id=151607797]
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="blockbench_export/plane3" index="0" unique_id=1390009760]
