@@ -6,8 +6,7 @@ class_name HUD
 @onready var tr_right: TextureRect = $Cr_slot_item/Tr_right
 @onready var tr_down: TextureRect = $Cr_slot_item/Tr_down
 
-@onready var player: Player = $".."
-
+@onready var player: Player = $"res://scenes/player/player.tscn"
 
 func update_equiped_item():
 	for item in player.array_equiped_item_slots:
