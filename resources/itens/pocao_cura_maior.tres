@@ -1,16 +1,14 @@
-[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bhnkqhsyjbey2"]
+[gd_resource type="Resource" script_class="ItemConsume" format=3 uid="uid://bhnkqhsyjbey2"]
 
-[ext_resource type="PackedScene" uid="uid://dsv4x6p1olawm" path="res://scenes/itens/pocao_cura_maior.tscn" id="1_uomx7"]
-[ext_resource type="Script" uid="uid://djbwc7oltclae" path="res://scripts/resources/Item_data.gd" id="1_v2qnj"]
+[ext_resource type="Script" uid="uid://djfvxa58pbkca" path="res://scripts/resources/Item_consume.gd" id="1_uc2gl"]
 [ext_resource type="Texture2D" uid="uid://shxyq274jgum" path="res://assets/textures/icons_itens/pocao_cura_maior.png" id="3_mu23y"]
 
 [resource]
-script = ExtResource("1_v2qnj")
+script = ExtResource("1_uc2gl")
 textura_item = ExtResource("3_mu23y")
 nome = "Pocao de cura grande"
 descricao = "cura ferimentos 20 hp +"
 tipo = "Consumivel"
 amontuavel = true
 quantidade_max = 64
-caminho_modelo = ExtResource("1_uomx7")
 metadata/_custom_type_script = "uid://djbwc7oltclae"

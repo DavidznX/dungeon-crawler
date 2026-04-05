@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="Item" format=4 uid="uid://bli3n7kmwdi7i"]
+[gd_resource type="Resource" script_class="ItemConsume" format=4 uid="uid://bli3n7kmwdi7i"]
 
 [ext_resource type="Texture2D" uid="uid://bt84e4ypfbgsi" path="res://assets/models/itens/maca_0.png" id="1_0705j"]
 [ext_resource type="Texture2D" uid="uid://dbpq4dlcvihbm" path="res://assets/textures/icons_itens/maca.png" id="2_76u7o"]
-[ext_resource type="Script" uid="uid://djbwc7oltclae" path="res://scripts/resources/Item_data.gd" id="2_705cb"]
+[ext_resource type="Script" uid="uid://djfvxa58pbkca" path="res://scripts/resources/Item_consume.gd" id="2_0705j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3xjse"]
 resource_name = "material_0"
@@ -49,7 +49,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3m6so")
 
 [resource]
-script = ExtResource("2_705cb")
+script = ExtResource("2_0705j")
 textura_item = ExtResource("2_76u7o")
 nome = "maca"
 descricao = "aaaa"

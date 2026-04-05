@@ -85,6 +85,7 @@ func _attack():
 	
 	var enemy:Entity = ray_attack.get_collider()
 	if enemy:
+		print(enemy.name)
 		enemy.get_damage(item.damage)
 	
 	_animate_hand_item_attack()
