@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cglrk252lkbmd"
-path.s3tc="res://.godot/imported/blocos_masmorra_1.png-dafef76b92b01af7df3061cbf34640ac.s3tc.ctex"
+uid="uid://bmf5lfvu6a1vr"
+path.s3tc="res://.godot/imported/tumba_0.png-ee32ba980da8ada67974a5852ff78708.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "5daa779ccdbbdbd3170ddd9c843b18f0"
+"md5": "ff798f2a7655f98c3532be5f488f5002"
 }
 
 [deps]
 
-source_file="res://assets/models/fases/blocos_para_grig/blocos_masmorra_1.png"
-dest_files=["res://.godot/imported/blocos_masmorra_1.png-dafef76b92b01af7df3061cbf34640ac.s3tc.ctex"]
+source_file="res://assets/models/fases/decoracao/tumba_0.png"
+dest_files=["res://.godot/imported/tumba_0.png-ee32ba980da8ada67974a5852ff78708.s3tc.ctex"]
 
 [params]
 

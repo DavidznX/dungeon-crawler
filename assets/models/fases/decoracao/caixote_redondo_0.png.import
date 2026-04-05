@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cglrk252lkbmd"
-path.s3tc="res://.godot/imported/blocos_masmorra_1.png-dafef76b92b01af7df3061cbf34640ac.s3tc.ctex"
+uid="uid://bvlvudr14pw2g"
+path.s3tc="res://.godot/imported/caixote_redondo_0.png-01ba4228442fb3be62500a544595d393.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "5daa779ccdbbdbd3170ddd9c843b18f0"
+"md5": "4f986ff5d414b2056732014de2d6238f"
 }
 
 [deps]
 
-source_file="res://assets/models/fases/blocos_para_grig/blocos_masmorra_1.png"
-dest_files=["res://.godot/imported/blocos_masmorra_1.png-dafef76b92b01af7df3061cbf34640ac.s3tc.ctex"]
+source_file="res://assets/models/fases/decoracao/caixote_redondo_0.png"
+dest_files=["res://.godot/imported/caixote_redondo_0.png-01ba4228442fb3be62500a544595d393.s3tc.ctex"]
 
 [params]
 
