@@ -15,6 +15,8 @@ var direction: Vector3
 signal block
 signal die
 
+@export var drop:Array[PackedScene]
+
 func apply_movement(direction: Vector3, target_speed: float, delta: float):
 	if direction != Vector3.ZERO:
 		var target_vel = direction * target_speed
@@ -43,5 +45,12 @@ func get_damage(value:int):
 
 func _die():
 	die.emit()
+	
+	
+	for node in drop:
+		var i = node.instantiate()
+		i.global_position = global_position
+		get_parent().add_child(i)  
+	
 	queue_free()
 	print("die: ", name)
