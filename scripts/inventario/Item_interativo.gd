@@ -1,5 +1,6 @@
-extends Node3D
+class_name ItemInterativo
 
+extends Node3D
 @export var item_data: Item
 @export var quantidade: int
 
